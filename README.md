@@ -32,7 +32,8 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 5. Describe the problem and provide steps so that a developer can try to replicate the issue. Include your operating system and browser version.
 6. When referencing other issues or pull requests, simply write #issue/pr-number.
 7. **Take a screenshot** of the issue and include it in the post.
-8. Click **Submit New Issue** and you are done! You will be automatically subscribed to notifications for any updates or future comments.
+8. Include **error message** if there is any.
+9. Click **Submit New Issue** and you are done! You will be automatically subscribed to notifications for any updates or future comments.
 
 ## Guide to Contributing
 ---
