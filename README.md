@@ -14,7 +14,7 @@ The software is written mainly in Java, with the GUI written in JavaFX.
 
 ## Issues
 ---
-Try searching for your issue on [gitHub](https://github.com/MorrisB--/MasterHash/issues) too see if anyone else has posted about a similar issue about the bug you have found too. If someone has, you can upvote the issue by replying to it with "+1" as your message.
+Try searching for your issue on [GitHub](https://github.com/MorrisB--/MasterHash/issues) to see if anyone else has posted about a similar issue about the bug you have found too. If someone has, you can upvote the issue by replying to it with "+1" as your message.
 
 If you can't find any relevant issues on GitHub, then create a new issue (see below) and our development team will take a look at your problem.
 
@@ -22,7 +22,7 @@ If you can't find any relevant issues on GitHub, then create a new issue (see be
 ---
 Crafting a good issue will make it much easier for the dev team to replicate and resolve your problem. Follow these steps to do it right:
 
-1. Go to our [gitHub Issues](https://github.com/MorrisB--/MasterHash/issues) page and click on New Issue.
+1. Go to our [GitHub Issues](https://github.com/MorrisB--/MasterHash/issues) page and click on New Issue.
 
 2. Write a meaningful title that describes the issue. Some good examples are *Logging in from the News and Field Guide pages doesn't redirect properly (using e-mail)* and *Typo: "for" instead of "while" loop*; bad examples include *A bug, HELP!!!!!* and *I found this bug in a Challenge*.
 
@@ -41,8 +41,8 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 2. Fork and clone the repo.
 3. Create a new branch with a descriptive name of your change/fix.
 4. Make and commit your changes with descriptive comments.
-5. Push your changes to github.
+5. Push your changes to GitHub.
 6. Start a pull request.
-7. Ask for a review in comments section.
+7. Ask for a review in the comments section.
 
 Pull requests from first-timers and seasoned veteran programmers are very much welcome.
