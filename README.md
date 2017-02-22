@@ -12,6 +12,11 @@ The software is written mainly in Java, with the GUI written in JavaFX.
 2. Change directory.
   `cd MasterHash`
 
+###How to Import to Eclipse
+---
+1. [Download eclipse] (http://www.eclipse.org/downloads/eclipse-packages)
+2. [Import the Project to eclipse] (http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
+
 ## Issues
 ---
 Try searching for your issue on [GitHub](https://github.com/MorrisB--/MasterHash/issues) to see if anyone else has posted about a similar issue about the bug you have found too. If someone has, you can upvote the issue by replying to it with "+1" as your message.
