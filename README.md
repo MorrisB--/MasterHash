@@ -12,10 +12,9 @@ The software is written mainly in Java, with the GUI written in JavaFX.
 2. Change directory.
   `cd MasterHash`
 
-###How to Import to Eclipse
----
-1. [Download eclipse] (http://www.eclipse.org/downloads/eclipse-packages)
-2. [Import the Project to eclipse] (http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
+To Import to Eclipse:
+3. [Download eclipse] (http://www.eclipse.org/downloads/eclipse-packages)
+4. [Import the Project to eclipse] (http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
 
 ## Issues
 ---
