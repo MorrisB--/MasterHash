@@ -22,23 +22,16 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-public class Home extends Application implements EventHandler<ActionEvent>  {
+public class Home extends Application{
 
 	Stage window;
 	TableView<Table> table;
-	TextField Iname,Iusername,Ipassword;
+	TextField nameInput,usernameInput,passwordInput;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
             launch(args);
 	}
 
-	@Override
-	public void handle(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
 		window  = primaryStage;
@@ -54,19 +47,13 @@ public class Home extends Application implements EventHandler<ActionEvent>  {
 		button2.setText("LOG IN");
 	
 
-        
-       
-        
-		
-		
-		
-		//table
+  		//table
 		TableColumn<Table,String> nameCol  = new TableColumn<>("Name");
 		nameCol.setMinWidth(200);
 		nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
 		
 
-		TableColumn<Table,String> usernameCol  = new TableColumn<>("Userame");
+		TableColumn<Table,String> usernameCol  = new TableColumn<>("Username");
 		usernameCol.setMinWidth(200);
 		usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
 		
@@ -75,22 +62,23 @@ public class Home extends Application implements EventHandler<ActionEvent>  {
 		passwordCol.setMinWidth(200);
 		passwordCol.setCellValueFactory(new PropertyValueFactory<>("password"));
 	
-		Iname = new TextField();
-		Iname.setPromptText("Name");
-		Iname.setMinWidth(100);
-		
+		nameInput = new TextField();
+		nameInput.setPromptText("Name");
+		nameInput.setPrefWidth(156);
 
-		Iusername = new TextField();
-		Iusername.setPromptText("Username");
-		Iusername.setMinWidth(100);
-		
+		usernameInput = new TextField();
+		usernameInput.setPromptText("Username");
+		usernameInput.setPrefWidth(156);
+	
 
-		Ipassword = new TextField();
-		Ipassword.setPromptText("Password");
-		Ipassword.setMinWidth(100);
+		passwordInput = new TextField();
+		passwordInput.setPromptText("Password");
+	    passwordInput.setPrefWidth(156);
 		
 		
-		Button addbutton = new Button("ADD");
+		Button addbutton = new Button();
+		addbutton.setText("Add");
+		addbutton.setMinWidth(80);
 		addbutton.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent event)
 			{
@@ -100,60 +88,45 @@ public class Home extends Application implements EventHandler<ActionEvent>  {
 			
 		});
 
-//		HBox hbox1 = new HBox();
-//		hbox1.setPadding(new Insets(10,10,10,10));
-//		hbox1.setSpacing(10);
-//        hbox1.getChildren().addAll(label1,button2);
-        
-        BorderPane bp = new BorderPane();
+		BorderPane bp = new BorderPane();
         bp.setLeft(label1);
         bp.setRight(button2);
-        bp.setPadding(new Insets(10, 20, 10, 20));
+        bp.setPadding(new Insets(20, 20, 10, 20));
 		
 		HBox hbox = new HBox();
 		hbox.setPadding(new Insets(10,10,10,10));
 		hbox.setSpacing(10);
-        hbox.getChildren().addAll(Iname,Iusername,Ipassword,addbutton);
+        hbox.getChildren().addAll(nameInput,usernameInput,passwordInput,addbutton);
         
         
-        
-		
-		table = new TableView<>();
+        table = new TableView<>();
 		table.setItems(getTable());
 		table.getColumns().addAll(nameCol,usernameCol,passwordCol);
 		
 		
-		VBox v = new VBox(20);
+		VBox v = new VBox(10);
 		v.getChildren().addAll(bp,table,hbox);
 		
-        
-		//StackPane layout = new StackPane();
-        //layout.getChildren().addAll(,table);
-       
 
-        
-
-		
-		Scene scene = new Scene(v,600,550);
+		Scene scene = new Scene(v,600,600);
 		window.setScene(scene);
 		window.show();
-	}
+	    }
 
 	public void ClickAddButton(){
 	   Table table1 = new Table();
-	   table1.setName(Iname.getText());
-	   table1.setUsername(Iusername.getText());
-	   table1.setPassword(Ipassword.getText());
+	   table1.setName(nameInput.getText());
+	   table1.setUsername(usernameInput.getText());
+	   table1.setPassword(passwordInput.getText());
 	   table.getItems().add(table1);
-	   Iname.clear();
-	   Iusername.clear();
-	   Ipassword.clear();
+	   nameInput.clear();
+	   usernameInput.clear();
+	   passwordInput.clear();
 	   }
 	
 	public ObservableList<Table> getTable() {
 		
 		ObservableList<Table> table2 = FXCollections.observableArrayList(); 
-		//table2.add(new Table("MyName", "NAMEofUser", "passWORD"));
 
 		return table2;
 	}
