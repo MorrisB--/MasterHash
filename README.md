@@ -14,8 +14,8 @@ The software is written mainly in Java, with the GUI written in JavaFX.
 
 To Import to Eclipse:  
   
-3. [Download eclipse](http://www.eclipse.org/downloads/eclipse-packages)
-4. [Import the Project to eclipse](http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
+3. [Download Eclipse](http://www.eclipse.org/downloads/eclipse-packages)
+4. [Import the Project to Eclipse](http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
 
 ## Issues
 ---
@@ -50,4 +50,4 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 6. Start a pull request.
 7. Ask for a review in the comments section.
 
-Pull requests from first-timers and seasoned veteran programmers are very much welcome.
+Pull requests from first-timers and veteran programmers are very much welcome.
