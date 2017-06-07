@@ -40,6 +40,9 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 8. Include **error message** if there is any.
 9. Click **Submit New Issue** and you are done! You will be automatically subscribed to notifications for any updates or future comments.
 
+##Good GUI links
+1. https://www.udemy.com/crash-course-into-javafx-the-best-way-to-make-gui-apps/
+
 ## Guide to Contributing
 ---
 1. Claim the issue in the comments section.
