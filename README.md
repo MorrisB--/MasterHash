@@ -51,3 +51,7 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 7. Ask for a review in the comments section.
 
 Pull requests from first-timers and veteran programmers are very much welcome.
+
+## Gitter link
+---
++[![Gitter](https://gitter.im/Master-Hash/Lobby)](https://gitter.in/Master-Hash)
