@@ -52,4 +52,4 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 
 Pull requests from first-timers and veteran programmers are very much welcome.
 
-Follow latest conversation here @ gitter [![alt tag](https://avatars1.githubusercontent.com/gitterHQ?&s=96)](https://gitter.im/Master-Hash/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/gitterHQ/gitter)
