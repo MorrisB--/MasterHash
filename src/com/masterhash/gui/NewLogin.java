@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -33,34 +33,33 @@ public class NewLogin extends Application {
         heading = "New Login";
 
         // heading label
-        Label lblHeading = new Label(heading);
-        lblHeading.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+        Label headingLabel = new Label(heading);
+        headingLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
 
         // name textfield
-        TextField TFname = new TextField();
-        TFname.setPromptText("Name");
+        TextField nameTextField = new TextField();
+        nameTextField.setPromptText("Name");
 
         // username textfield
-        TextField TFuserName = new TextField();
-        TFuserName.setPromptText("Username");
+        TextField userNameTextField = new TextField();
+        userNameTextField.setPromptText("Username");
 
         // password field and generate button
-        PasswordField PFpassword = new PasswordField();
-        PFpassword.setPromptText("Password");
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPromptText("Password");
         Button btnGenerate = new Button("Generate");    // Generate button
 
         // align password field and generate button
         HBox generatePasswordArea = new HBox();
-        generatePasswordArea.getChildren().addAll(PFpassword, btnGenerate);
+        generatePasswordArea.getChildren().addAll(passwordField, btnGenerate);
 
         // submit button
-        Button btnSubmit = new Button("Submit");
+        Button submitButton = new Button("Submit");
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(0, 20, 0, 20));
         layout.setAlignment(Pos.CENTER_LEFT);
-        layout.getChildren().addAll(
-                lblHeading, TFname, TFuserName, generatePasswordArea, btnSubmit
+        layout.getChildren().addAll(headingLabel, nameTextField, userNameTextField, generatePasswordArea, submitButton
         );
 
         Scene scene = new Scene(layout, 300, 400);
