@@ -51,3 +51,5 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 7. Ask for a review in the comments section.
 
 Pull requests from first-timers and veteran programmers are very much welcome.
+
+![alt tag](https://lh3.googleusercontent.com/tKaGaLzQ1G0y6RHjXGJC-DGcFvSukQvVCZ7pao_6aQs3xwihzeNK90fh5Zvflh2m-EQ=w300)
