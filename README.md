@@ -1,5 +1,5 @@
 # MasterHash
-
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/Master-Hash/Lobby?source=orgpage)
 ## About
 ---
 MasterHash is a password manager that allows a user to have an almost infinite amount of passwords while only using their main one. What will make this product different from others on the market is that it will all be stored in one encrypted file which will allow easy transport.
@@ -13,7 +13,7 @@ The software is written mainly in Java, with the GUI written in JavaFX.
   `cd MasterHash`
 
 To Import to Eclipse:  
-  
+
 3. [Download Eclipse](http://www.eclipse.org/downloads/eclipse-packages)
 4. [Import the Project to Eclipse](http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
 
@@ -50,6 +50,12 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 6. Start a pull request.
 7. Ask for a review in the comments section.
 
-Pull requests from first-timers and veteran programmers are very much welcome.
+### Note
+---
+Make sure the commit messages contain reference to Issue numbers. Please append the issue #, each commit message.
+```bash
+> git commit -m "fixed everything, Issue: #10"
+```
+---
 
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/Master-Hash/Lobby?source=orgpage)
+Pull requests from first-timers and veteran programmers are very much welcome.
