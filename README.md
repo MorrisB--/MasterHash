@@ -50,11 +50,11 @@ Crafting a good issue will make it much easier for the dev team to replicate and
 6. Start a pull request.
 7. Ask for a review in the comments section.
 
-### Note
----
-Make sure the commit messages contain reference to Issue numbers. Please append the issue #, each commit message.
+### Note:
+
+In the interest of tracking contributions, ensure the commit messages contain reference to Issue numbers. Please append the issue # in each commit message.
 ```bash
-> git commit -m "fixed everything, Issue: #10"
+> git commit -m "fixed everything, Issue #10"
 ```
 ---
 
