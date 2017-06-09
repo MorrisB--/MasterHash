@@ -7,6 +7,7 @@ The software is written mainly in Java, with the GUI written in JavaFX.
 
 ## Getting Started
 ---
+### Working on the Project
 1. Clone the repository.
   `git clone git@github.com:MorrisB--/MasterHash.git`
 2. Change directory.
@@ -16,6 +17,9 @@ To Import to Eclipse:
   
 3. [Download Eclipse](http://www.eclipse.org/downloads/eclipse-packages)
 4. [Import the Project to Eclipse](http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories)
+
+### Learning JavaFX: An On-Ramp
+There are several great ways to get going with JavaFX. This free online [tutorial](https://www.udemy.com/crash-course-into-javafx-the-best-way-to-make-gui-apps/) can have a huge impact on your learning experience but if you prefer a series of videos to get a basic overview of JavaFX, then we recommend this [playlist](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBzfXLWLSYVy8EbTdpGbUIG).
 
 ## Issues
 ---
