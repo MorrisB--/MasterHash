@@ -62,3 +62,7 @@ In the interest of tracking contributions, ensure the commit messages contain re
 ---
 
 Pull requests from first-timers and veteran programmers are very much welcome.
+
+## Gitter link
+---
++[![Gitter](https://gitter.im/Master-Hash/Lobby)](https://gitter.in/Master-Hash)
