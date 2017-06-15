@@ -1,6 +1,7 @@
 package com.masterhash.gui;
 
 import java.io.File;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
