@@ -14,56 +14,46 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-/*
- * Sapayth Hossain
- */
 public class NewLogin extends Application {
 
-    Stage window;
-    String heading;
+	Stage window;
+	String heading;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        window = primaryStage;
-        window.setTitle("Log In");  // title of the window
-        heading = "New Login";
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		window = primaryStage;
+		window.setTitle("Log In");
+		heading = "New Login";
 
-        // heading label
-        Label headingLabel = new Label(heading);
-        headingLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+		Label headingLabel = new Label(heading);
+		headingLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
 
-        // name textfield
-        TextField nameTextField = new TextField();
-        nameTextField.setPromptText("Name");
+		TextField nameTextField = new TextField();
+		nameTextField.setPromptText("Name");
 
-        // username textfield
-        TextField userNameTextField = new TextField();
-        userNameTextField.setPromptText("Username");
+		TextField userNameTextField = new TextField();
+		userNameTextField.setPromptText("Username");
 
-        // password field and generate button
-        PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Password");
-        Button btnGenerate = new Button("Generate");    // Generate button
+		PasswordField passwordField = new PasswordField();
+		passwordField.setPromptText("Password");
+		Button generateButton = new Button("Generate");
 
-        // align password field and generate button
-        HBox generatePasswordArea = new HBox();
-        generatePasswordArea.getChildren().addAll(passwordField, btnGenerate);
+		HBox generatePasswordArea = new HBox();
+		generatePasswordArea.getChildren().addAll(passwordField, generateButton);
 
-        // submit button
-        Button submitButton = new Button("Submit");
+		Button submitButton = new Button("Submit");
 
-        VBox layout = new VBox(10);
-        layout.setPadding(new Insets(0, 20, 0, 20));
-        layout.setAlignment(Pos.CENTER_LEFT);
-        layout.getChildren().addAll(headingLabel, nameTextField, userNameTextField, generatePasswordArea, submitButton
-        );
+		VBox layout = new VBox(10);
+		layout.setPadding(new Insets(0, 20, 0, 20));
+		layout.setAlignment(Pos.CENTER_LEFT);
+		layout.getChildren().addAll(headingLabel, nameTextField, userNameTextField, generatePasswordArea, submitButton);
 
-        Scene scene = new Scene(layout, 300, 400);
-        window.setScene(scene);
-        window.show();
-    }
+		Scene scene = new Scene(layout, 300, 400);
+		window.setScene(scene);
+		window.show();
+	}
 }

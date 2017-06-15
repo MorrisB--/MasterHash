@@ -22,46 +22,41 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-public class Home extends Application{
+public class Home extends Application {
 
 	Stage window;
 	TableView<Table> table;
-	TextField nameInput,usernameInput,passwordInput;
+	TextField nameInput, usernameInput, passwordInput;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-            launch(args);
+		launch(args);
 	}
 
 	public void start(Stage primaryStage) throws Exception {
-		
-		window  = primaryStage;
-		window.setTitle("Home");
-		Label label1 = new Label("Master Hash");
-		
-		label1.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
-		label1.setAlignment(Pos.CENTER);
-		
-		
-		//Login button
-		Button button2  = new Button();
-		button2.setText("LOG IN");
-	
 
-  		//table
-		TableColumn<Table,String> nameCol  = new TableColumn<>("Name");
+		window = primaryStage;
+		window.setTitle("Home");
+		Label titleLabel = new Label("Master Hash");
+
+		titleLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
+		titleLabel.setAlignment(Pos.CENTER);
+
+		Button newLoginButton = new Button();
+		newLoginButton.setText("New Login");
+
+		TableColumn<Table, String> nameCol = new TableColumn<>("Name");
 		nameCol.setMinWidth(200);
 		nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-		
 
-		TableColumn<Table,String> usernameCol  = new TableColumn<>("Username");
+		TableColumn<Table, String> usernameCol = new TableColumn<>("Username");
 		usernameCol.setMinWidth(200);
 		usernameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
-		
 
-		TableColumn<Table,String> passwordCol  = new TableColumn<>("Password");
+		TableColumn<Table, String> passwordCol = new TableColumn<>("Password");
 		passwordCol.setMinWidth(200);
 		passwordCol.setCellValueFactory(new PropertyValueFactory<>("password"));
-	
+
 		nameInput = new TextField();
 		nameInput.setPromptText("Name");
 		nameInput.setPrefWidth(156);
@@ -69,66 +64,59 @@ public class Home extends Application{
 		usernameInput = new TextField();
 		usernameInput.setPromptText("Username");
 		usernameInput.setPrefWidth(156);
-	
 
 		passwordInput = new TextField();
 		passwordInput.setPromptText("Password");
-	    passwordInput.setPrefWidth(156);
-		
-		
+		passwordInput.setPrefWidth(156);
+
 		Button addbutton = new Button();
 		addbutton.setText("Add");
 		addbutton.setMinWidth(80);
-		addbutton.setOnAction(new EventHandler<ActionEvent>(){
-			public void handle(ActionEvent event)
-			{
-				ClickAddButton();
+		addbutton.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				clickAddButton();
 			}
 
-			
 		});
 
-		BorderPane bp = new BorderPane();
-        bp.setLeft(label1);
-        bp.setRight(button2);
-        bp.setPadding(new Insets(20, 20, 10, 20));
-		
-		HBox hbox = new HBox();
-		hbox.setPadding(new Insets(10,10,10,10));
-		hbox.setSpacing(10);
-        hbox.getChildren().addAll(nameInput,usernameInput,passwordInput,addbutton);
-        
-        
-        table = new TableView<>();
-		table.setItems(getTable());
-		table.getColumns().addAll(nameCol,usernameCol,passwordCol);
-		
-		
-		VBox v = new VBox(10);
-		v.getChildren().addAll(bp,table,hbox);
-		
+		BorderPane borderPane = new BorderPane();
+		borderPane.setLeft(titleLabel);
+		borderPane.setRight(newLoginButton);
+		borderPane.setPadding(new Insets(20, 20, 10, 20));
 
-		Scene scene = new Scene(v,600,600);
+		HBox hBox = new HBox();
+		hBox.setPadding(new Insets(10, 10, 10, 10));
+		hBox.setSpacing(10);
+		hBox.getChildren().addAll(nameInput, usernameInput, passwordInput, addbutton);
+
+		table = new TableView<>();
+		table.setItems(getTable());
+		table.getColumns().addAll(nameCol, usernameCol, passwordCol);
+
+		VBox vBox = new VBox(10);
+		vBox.getChildren().addAll(borderPane, table, hBox);
+
+		Scene scene = new Scene(vBox, 600, 600);
 		window.setScene(scene);
 		window.show();
-	    }
+	}
 
-	public void ClickAddButton(){
-	   Table table1 = new Table();
-	   table1.setName(nameInput.getText());
-	   table1.setUsername(usernameInput.getText());
-	   table1.setPassword(passwordInput.getText());
-	   table.getItems().add(table1);
-	   nameInput.clear();
-	   usernameInput.clear();
-	   passwordInput.clear();
-	   }
-	
+	public void clickAddButton() {
+		Table table1 = new Table();
+		table1.setName(nameInput.getText());
+		table1.setUsername(usernameInput.getText());
+		table1.setPassword(passwordInput.getText());
+		table.getItems().add(table1);
+		nameInput.clear();
+		usernameInput.clear();
+		passwordInput.clear();
+	}
+
 	public ObservableList<Table> getTable() {
-		
-		ObservableList<Table> table2 = FXCollections.observableArrayList(); 
 
-		return table2;
+		ObservableList<Table> table = FXCollections.observableArrayList();
+
+		return table;
 	}
 
 }
