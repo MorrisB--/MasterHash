@@ -1,6 +1,5 @@
 package com.masterhash.gui;
 
-import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -12,20 +11,17 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class NewLogin extends Application {
+public class NewLogin {
 
-	Stage window;
-	String heading;
+	static Stage window;
+	static String heading;
 
-	public static void main(String[] args) {
-		launch(args);
-	}
-
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		window = primaryStage;
+	public static void display() {
+		window = new Stage();
+		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle("Log In");
 		heading = "New Login";
 
@@ -54,6 +50,6 @@ public class NewLogin extends Application {
 
 		Scene scene = new Scene(layout, 300, 400);
 		window.setScene(scene);
-		window.show();
+		window.showAndWait();
 	}
 }

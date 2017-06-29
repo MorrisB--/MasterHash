@@ -1,6 +1,5 @@
 package com.masterhash.gui;
 
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -17,19 +16,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-public class Home extends Application {
+public class Home {
 
-	Stage window;
-	TableView<Table> table;
-
-	public static void main(String[] args) {
-		launch(args);
-	}
+	static Stage window;
+	static TableView<Table> table;
 
 	@SuppressWarnings("unchecked")
-	public void start(Stage primaryStage) throws Exception {
+	public static void display() {
 
-		window = primaryStage;
+		window = new Stage();
 		window.setTitle("Home");
 		Label titleLabel = new Label("Master Hash");
 
@@ -38,6 +33,7 @@ public class Home extends Application {
 
 		Button newLoginButton = new Button();
 		newLoginButton.setText("New Login");
+		newLoginButton.setOnAction(e -> NewLogin.display());
 
 		TableColumn<Table, String> nameCol = new TableColumn<>("Name");
 		nameCol.setMinWidth(200);
@@ -68,7 +64,7 @@ public class Home extends Application {
 		window.show();
 	}
 
-	public ObservableList<Table> getTable() {
+	public static ObservableList<Table> getTable() {
 
 		ObservableList<Table> table = FXCollections.observableArrayList();
 
