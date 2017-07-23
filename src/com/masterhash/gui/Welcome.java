@@ -110,6 +110,15 @@ public class Welcome extends Application {
 	
 	private static HBox setupSignUpAndSubmitButtons() {
 		HBox signUpAndSubmitButtons = new HBox(10);
+		
+		submitButton.setOnAction(e -> {
+			Home.display();
+			window.close();
+		});
+		signUpButton.setOnAction(e -> {
+			Home.display();
+			window.close();
+		});
 
 		signUpAndSubmitButtons.getChildren().addAll(submitButton, signUpButton);
 		signUpAndSubmitButtons.setAlignment(Pos.CENTER);
