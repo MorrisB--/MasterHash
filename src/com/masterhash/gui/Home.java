@@ -21,7 +21,6 @@ public class Home {
 	static Stage window;
 	static TableView<Table> table;
 
-	@SuppressWarnings("unchecked")
 	public static void display() {
 
 		window = new Stage();
@@ -54,7 +53,11 @@ public class Home {
 
 		table = new TableView<>();
 		table.setItems(getTable());
-		table.getColumns().addAll(nameCol, usernameCol, passwordCol);
+
+		ObservableList<TableColumn<Table, ?>> columns = table.getColumns();
+		columns.add(nameCol);
+		columns.add(usernameCol);
+		columns.add(passwordCol);
 
 		VBox vBox = new VBox(10);
 		vBox.getChildren().addAll(borderPane, table);
