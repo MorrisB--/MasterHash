@@ -23,11 +23,11 @@ public class Welcome extends Application {
     
 	// Defining event components
 	private static TextField usernameTextField = new TextField();
-    private static PasswordField passwordTextField = new PasswordField();
+	private static PasswordField passwordTextField = new PasswordField();
 	private static TextField fileLocationTextField = new TextField();
 	private static Button submitButton = new Button("Submit");
-    private static Button signUpButton = new Button("Sign Up");
-    private static FileChooser fileChooser = new FileChooser();
+	private static Button signUpButton = new Button("Sign Up");
+	private static FileChooser fileChooser = new FileChooser();
 	
     
 	public static void main(String[] args) {
@@ -129,9 +129,9 @@ public class Welcome extends Application {
 	private static void chooseFile() {
 		File chosenFile = fileChooser.showOpenDialog(window);
 		if (chosenFile != null) {
-            fileLocationTextField.setText(chosenFile.getPath());
-            file = chosenFile;
-        }
+			fileLocationTextField.setText(chosenFile.getPath());
+			file = chosenFile;
+		}
 	}
 	
 	
