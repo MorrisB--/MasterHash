@@ -94,6 +94,7 @@ public class NewLogin {
 		for (int i = 0; i < newPassword.length; i++) {
 			// make sure current element is null
 			if (newPassword[i] == '\u0000') {
+				// range from '!' to '~' covers all legal characters
 				char randChar = genChar('!', '~', rand);
 				newPassword[i] = randChar;
 			}
