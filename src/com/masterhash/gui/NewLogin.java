@@ -17,15 +17,15 @@ import javafx.stage.Stage;
 public class NewLogin {
 
 	static Stage window;
-	static String heading;
+	static String HEADING;
 
 	public static void display() {
 		window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle("Log In");
-		heading = "New Login";
+		HEADING = "New Login";
 
-		Label headingLabel = new Label(heading);
+		Label headingLabel = new Label(HEADING);
 		headingLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 30));
 
 		TextField nameTextField = new TextField();

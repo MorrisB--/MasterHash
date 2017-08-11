@@ -48,7 +48,7 @@ public class Welcome extends Application {
 		VBox fileBox = setupFileBox();
 		HBox signUpAndSubmitButtons = setupSignUpAndSubmitButtons();
 		
-		// Adding componenets to main layout box
+		// Adding components to main layout box
 		vBox.getChildren().addAll(masterHashTitle, usernameAndPasswordBox, fileBox, signUpAndSubmitButtons);
 		vBox.setAlignment(Pos.TOP_CENTER);
 		
