@@ -116,7 +116,7 @@ public class Welcome extends Application {
 			window.close();
 		});
 		signUpButton.setOnAction(e -> {
-			Home.display();
+			NewLogin.display();
 			window.close();
 		});
 
