@@ -13,4 +13,4 @@ This is just a very rough idea but the content of the file can read and look som
 		- NewPassword.java - Used to generate new passwords for logins.
 		- Decrypt.java - Used to decrypt the file.
 		- Encrypt.java - Used to encrypt the file.
-		
+		 
