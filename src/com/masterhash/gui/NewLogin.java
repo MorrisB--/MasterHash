@@ -1,8 +1,11 @@
 package com.masterhash.gui;
 
+import static com.masterhash.gui.Home.file;
+import java.io.IOException;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -42,6 +45,20 @@ public class NewLogin {
 		generatePasswordArea.getChildren().addAll(passwordField, generateButton);
 
 		Button submitButton = new Button("Submit");
+                
+                submitButton.setOnAction(e -> {
+                        Table t = new Table(nameTextField.getText(), 
+                                userNameTextField.getText(), 
+                                passwordField.getText());
+                        try {
+                            Home.addTable(t);
+                        } catch (IOException ex) {
+                            Alert x = new Alert(Alert.AlertType.ERROR);
+                            x.setTitle("Write Error");
+                            x.setContentText("Error while writing to " + file.getAbsolutePath());
+                            x.showAndWait();
+                        };  
+		});
 
 		VBox layout = new VBox(10);
 		layout.setPadding(new Insets(0, 20, 0, 20));

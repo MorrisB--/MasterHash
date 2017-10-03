@@ -1,5 +1,9 @@
 package com.masterhash.gui;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -15,11 +19,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.CREATE;
+import javafx.scene.control.Alert;
 
 public class Home {
 
 	static Stage window;
 	static TableView<Table> table;
+        static File file;
 
 	public static void display() {
 
@@ -73,5 +82,12 @@ public class Home {
 
 		return table;
 	}
+        
+        public static void addTable(Table t) throws IOException {
+            table.getItems().add(t);  
+            String s = String.join(",", t.getName(), t.getUsername(), t.getPassword());
+            Files.write(file.toPath(), s.getBytes(UTF_8), APPEND, CREATE);
+            Files.write(file.toPath(), System.lineSeparator().getBytes(UTF_8), APPEND, CREATE);
+        }
 
 }

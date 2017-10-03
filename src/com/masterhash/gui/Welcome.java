@@ -112,10 +112,12 @@ public class Welcome extends Application {
 		HBox signUpAndSubmitButtons = new HBox(10);
 		
 		submitButton.setOnAction(e -> {
+                        Home.file = file;
 			Home.display();
 			window.close();
 		});
 		signUpButton.setOnAction(e -> {
+                        Home.file = file;
 			Home.display();
 			window.close();
 		});
