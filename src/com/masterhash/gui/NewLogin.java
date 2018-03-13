@@ -1,9 +1,14 @@
 package com.masterhash.gui;
 
+import java.util.Random;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -33,20 +38,34 @@ public class NewLogin {
 
 		TextField userNameTextField = new TextField();
 		userNameTextField.setPromptText("Username");
-
-		PasswordField passwordField = new PasswordField();
-		passwordField.setPromptText("Password");
+		
 		Button generateButton = new Button("Generate");
+		TextField shownPasswordField = new TextField();
+		PasswordField hiddenPasswordField = new PasswordField();
+
+	    shownPasswordField.setManaged(false);
+	    shownPasswordField.setVisible(false);
+	    
+	    CheckBox checkBox = new CheckBox("Hide/Show");
+	    shownPasswordField.managedProperty().bind(checkBox.selectedProperty());
+	    shownPasswordField.visibleProperty().bind(checkBox.selectedProperty());
+
+	    hiddenPasswordField.managedProperty().bind(checkBox.selectedProperty().not());
+	    hiddenPasswordField.visibleProperty().bind(checkBox.selectedProperty().not());
+
+	    shownPasswordField.textProperty().bindBidirectional(hiddenPasswordField.textProperty());
 
 		HBox generatePasswordArea = new HBox();
-		generatePasswordArea.getChildren().addAll(passwordField, generateButton);
+		VBox showOrHideArea = new VBox();
+		generatePasswordArea.getChildren().addAll(shownPasswordField,hiddenPasswordField, generateButton);
+		showOrHideArea.getChildren().addAll(generatePasswordArea,checkBox);
 
 		Button submitButton = new Button("Submit");
 
 		VBox layout = new VBox(10);
 		layout.setPadding(new Insets(0, 20, 0, 20));
 		layout.setAlignment(Pos.CENTER_LEFT);
-		layout.getChildren().addAll(headingLabel, nameTextField, userNameTextField, generatePasswordArea, submitButton);
+		layout.getChildren().addAll(headingLabel, nameTextField, userNameTextField, showOrHideArea, submitButton);
 
 		Scene scene = new Scene(layout, 300, 400);
 		window.setScene(scene);
